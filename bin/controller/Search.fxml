@@ -11,7 +11,7 @@
    <children>
       <Pane prefHeight="550.0" prefWidth="500.0">
          <children>
-            <TextField fx:id="edtSearch" layoutX="13.0" layoutY="40.0" onKeyTyped="#completeSearch" prefHeight="26.0" prefWidth="475.0" />
+            <TextField fx:id="edtSearch" layoutX="13.0" layoutY="40.0" onKeyPressed="#handleKeyPressed" onKeyReleased="#completeSearch" prefHeight="26.0" prefWidth="475.0" />
             <ListView fx:id="lstSearch" layoutX="14.0" layoutY="72.0" prefHeight="432.0" prefWidth="475.0" />
             <Button fx:id="btnCancel" layoutX="394.0" layoutY="512.0" mnemonicParsing="false" onMousePressed="#close" prefHeight="26.0" prefWidth="92.0" text="Cancelar" />
             <Button fx:id="btnOK" layoutX="293.0" layoutY="512.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="OK" />
