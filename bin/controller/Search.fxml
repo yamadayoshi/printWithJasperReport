@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchController">
+<AnchorPane prefHeight="463.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchController">
    <children>
-      <Pane prefHeight="550.0" prefWidth="500.0">
+      <Pane prefHeight="456.0" prefWidth="455.0">
          <children>
-            <TextField fx:id="edtSearch" layoutX="13.0" layoutY="40.0" onKeyPressed="#handleKeyPressed" onKeyReleased="#completeSearch" prefHeight="26.0" prefWidth="475.0" />
-            <ListView fx:id="lstSearch" layoutX="14.0" layoutY="72.0" prefHeight="432.0" prefWidth="475.0" />
-            <Button fx:id="btnCancel" layoutX="394.0" layoutY="512.0" mnemonicParsing="false" onMousePressed="#close" prefHeight="26.0" prefWidth="92.0" text="Cancelar" />
-            <Button fx:id="btnOK" layoutX="293.0" layoutY="512.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="OK" />
-            <Label alignment="CENTER" layoutX="14.0" layoutY="7.0" prefHeight="26.0" prefWidth="475.0" text="Label" />
+            <TextField fx:id="edtSearch" layoutX="6.0" layoutY="40.0" onKeyPressed="#handleKeyPressed" onKeyReleased="#completeSearch" prefHeight="26.0" prefWidth="440.0" />
+            <ListView fx:id="lstSearch" layoutX="7.0" layoutY="72.0" onMousePressed="#doubleClickSelect" prefHeight="350.0" prefWidth="440.0" />
+            <Button fx:id="btnCancel" layoutX="355.0" layoutY="429.0" mnemonicParsing="false" onMousePressed="#close" prefHeight="26.0" prefWidth="92.0" text="Cancelar" />
+            <Button fx:id="btnOK" layoutX="254.0" layoutY="429.0" mnemonicParsing="false" onMousePressed="#clickOK" prefHeight="26.0" prefWidth="92.0" text="OK" />
+            <Label alignment="CENTER" layoutX="7.0" layoutY="7.0" prefHeight="26.0" prefWidth="440.0" text="Label" />
          </children>
       </Pane>
    </children>

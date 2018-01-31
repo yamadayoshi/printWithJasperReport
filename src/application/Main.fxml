@@ -12,59 +12,51 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <Pane layoutY="-14.0" onKeyPressed="#handleKeyPressed" prefHeight="500.0" prefWidth="600.0">
+      <Pane layoutY="-14.0" onKeyPressed="#handleKeyPressed" prefHeight="386.0" prefWidth="490.0">
          <children>
-            <Label alignment="CENTER" layoutY="19.0" prefHeight="37.0" prefWidth="600.0" style="-fx-text-fill: #848484;" text="Label" textAlignment="CENTER">
+            <Label alignment="CENTER" layoutY="19.0" prefHeight="37.0" prefWidth="490.0" style="-fx-text-fill: #848484;" text="Label" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Button fx:id="btnPrint" layoutX="404.0" layoutY="456.0" mnemonicParsing="false" onMousePressed="#print" prefHeight="26.0" prefWidth="92.0" text="Imprimir" />
-            <Pane fx:id="paneDate1" layoutX="5.0" layoutY="56.0" prefHeight="78.0" prefWidth="590.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
+            <Pane fx:id="paneDate" layoutX="5.0" layoutY="56.0" prefHeight="65.0" prefWidth="480.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
                <children>
-                  <Label layoutX="225.0" layoutY="14.0" prefHeight="16.0" prefWidth="140.0" text="Data inicial" />
-                  <DatePicker fx:id="datePickerInicio1" layoutX="225.0" layoutY="32.0" prefHeight="26.0" prefWidth="140.0" />
-                  <Label layoutX="377.0" layoutY="16.0" prefHeight="16.0" prefWidth="140.0" text="Data final" />
-                  <DatePicker fx:id="datePickerFim1" layoutX="377.0" layoutY="32.0" prefHeight="26.0" prefWidth="140.0" />
-                  <Label layoutX="531.0" layoutY="36.0" text="pane 1" />
-                  <ComboBox fx:id="cmbPeriodo" layoutX="14.0" layoutY="31.0" prefHeight="26.0" prefWidth="195.0" />
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="16.0" prefWidth="140.0" text="Periodo" />
+                  <Label layoutX="197.0" layoutY="11.0" prefHeight="16.0" prefWidth="130.0" text="Data inicial" />
+                  <DatePicker fx:id="datePickerInicio1" layoutX="197.0" layoutY="29.0" prefHeight="26.0" prefWidth="130.0" />
+                  <Label layoutX="339.0" layoutY="11.0" prefHeight="16.0" prefWidth="130.0" text="Data final" />
+                  <DatePicker fx:id="datePickerFim1" layoutX="339.0" layoutY="29.0" prefHeight="26.0" prefWidth="130.0" />
+                  <ComboBox fx:id="cmbPeriodo" layoutX="14.0" layoutY="28.0" prefHeight="26.0" prefWidth="170.0" />
+                  <Label layoutX="14.0" layoutY="11.0" prefHeight="16.0" prefWidth="140.0" text="Periodo" />
                </children>
             </Pane>
-            <Pane fx:id="paneDate2" layoutX="5.0" layoutY="185.0" prefHeight="59.0" prefWidth="590.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
+            <Pane fx:id="paneFilter1" layoutX="6.0" layoutY="128.0" prefHeight="65.0" prefWidth="480.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
                <children>
-                  <Label layoutX="14.0" layoutY="4.0" prefHeight="16.0" prefWidth="140.0" text="Data1" />
-                  <DatePicker fx:id="datePickerInicio2" layoutX="14.0" layoutY="22.0" prefHeight="26.0" prefWidth="140.0" />
-                  <Label layoutX="189.0" layoutY="4.0" prefHeight="16.0" prefWidth="140.0" text="Data2" />
-                  <DatePicker fx:id="datePickerFim2" layoutX="189.0" layoutY="22.0" prefHeight="26.0" prefWidth="140.0" />
-                  <Label layoutX="404.0" layoutY="28.0" text="pane 2" />
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="16.0" prefWidth="140.0" text="Filter 1" />
+                  <Label fx:id="lblSelection1" layoutX="165.0" layoutY="31.0" prefHeight="16.0" prefWidth="301.0" wrapText="true" />
+                  <TextField fx:id="edtSearch1" layoutX="14.0" layoutY="27.0" prefHeight="26.0" prefWidth="170.0" />
+                  <ImageView fx:id="searchIcon" fitHeight="20.0" fitWidth="20.0" layoutX="158.0" layoutY="30.0" onMousePressed="#search" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
-            <Pane fx:id="paneDate3" layoutX="5.0" layoutY="254.0" prefHeight="59.0" prefWidth="590.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
+            <Pane fx:id="paneFilter2" layoutX="6.0" layoutY="201.0" prefHeight="65.0" prefWidth="480.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
                <children>
-                  <Label layoutX="14.0" layoutY="4.0" prefHeight="16.0" prefWidth="140.0" text="Data1" />
-                  <DatePicker layoutX="14.0" layoutY="22.0" prefHeight="26.0" prefWidth="140.0" />
-                  <Label layoutX="189.0" layoutY="4.0" prefHeight="16.0" prefWidth="140.0" text="Data2" />
-                  <DatePicker layoutX="189.0" layoutY="22.0" prefHeight="26.0" prefWidth="140.0" />
-                  <Label layoutX="402.0" layoutY="24.0" text="pane 3" />
-               </children>
-            </Pane>
-            <Pane fx:id="paneDate31" layoutX="5.0" layoutY="319.0" prefHeight="59.0" prefWidth="590.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
-               <children>
-                  <Label layoutX="14.0" layoutY="4.0" prefHeight="16.0" prefWidth="140.0" text="Data1" />
-                  <Label layoutX="402.0" layoutY="22.0" text="pane 3" />
-                  <TextField layoutX="14.0" layoutY="21.0" />
-                  <ImageView fx:id="searchIcon" fitHeight="22.0" fitWidth="22.0" layoutX="160.0" layoutY="23.0" onMousePressed="#search" pickOnBounds="true" preserveRatio="true" />
-               </children>
-            </Pane>
-            <Pane fx:id="paneDate311" layoutX="5.0" layoutY="383.0" prefHeight="59.0" prefWidth="590.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
-               <children>
-                  <Label layoutX="14.0" layoutY="4.0" prefHeight="16.0" prefWidth="140.0" text="Data2" />
-                  <Label layoutX="402.0" layoutY="22.0" text="pane 4" />
-                  <TextField layoutX="14.0" layoutY="21.0" />
+                  <Label layoutX="14.0" layoutY="13.0" prefHeight="16.0" prefWidth="140.0" text="Filter 2" />
+                  <Label layoutX="164.0" layoutY="37.0" prefHeight="16.0" prefWidth="301.0" />
+                  <TextField layoutX="14.0" layoutY="30.0" prefHeight="26.0" prefWidth="170.0" />
                   <ImageView fx:id="searchIcon1" fitHeight="22.0" fitWidth="22.0" layoutX="160.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
-            <Button fx:id="btnCancel" layoutX="503.0" layoutY="456.0" mnemonicParsing="false" onMousePressed="#close" prefHeight="26.0" prefWidth="92.0" text="Cancelar" />
+            <Pane fx:id="paneDate3111" layoutX="5.0" layoutY="273.0" prefHeight="65.0" prefWidth="480.0" style="-fx-background-color: #E6E6E6; -fx-border-color: #8181F7; -fx-border-width: 1;">
+               <children>
+                  <Label layoutX="14.0" layoutY="11.0" prefHeight="16.0" prefWidth="140.0" text="Ordenado por:" />
+                  <ImageView fx:id="searchIcon11" fitHeight="22.0" fitWidth="22.0" layoutX="160.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                  <ComboBox fx:id="cmbOrdenacao" layoutX="14.0" layoutY="28.0" prefHeight="26.0" prefWidth="170.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="6.0" layoutY="343.0" prefHeight="40.0" prefWidth="480.0" style="-fx-background-color: cyan;">
+               <children>
+                  <Button fx:id="btnPrint" layoutX="286.0" layoutY="7.0" mnemonicParsing="false" onMousePressed="#print" prefHeight="26.0" prefWidth="92.0" text="Imprimir" />
+                  <Button fx:id="btnCancel" layoutX="385.0" layoutY="7.0" mnemonicParsing="false" onMousePressed="#close" prefHeight="26.0" prefWidth="92.0" text="Cancelar" />
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>
