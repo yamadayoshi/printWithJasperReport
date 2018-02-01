@@ -1,7 +1,6 @@
 #printWithJasperreports
 
 Simple interface in JavaFX to use Jasper Reports library.
-
 This project is using jasperreports-6.5.0.jar as main version. 
 
 Jasper Reports library requires some additional jar to work:
